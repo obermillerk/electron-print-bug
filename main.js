@@ -32,6 +32,10 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  mainWindow.webContents.print({silent: true}, (success) => {
+    console.log(success);
+  });
 }
 
 // This method will be called when Electron has finished
